@@ -12,6 +12,9 @@
 		95C186691FB62EE100193C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C186671FB62EE100193C61 /* Main.storyboard */; };
 		95C1866B1FB62EE100193C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C1866A1FB62EE100193C61 /* Assets.xcassets */; };
 		95C1866E1FB62EE100193C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C1866C1FB62EE100193C61 /* LaunchScreen.storyboard */; };
+		95E977D21FB6376F00A9A937 /* AmountEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */; };
+		95E977D51FB63BE600A9A937 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D41FB63BE600A9A937 /* StringExtensions.swift */; };
+		95E977D71FB646E500A9A937 /* MercadoPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D61FB646E500A9A937 /* MercadoPago.swift */; };
 		D64EAAD5730BD4FD7F35E78C /* Pods_MLtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ACC3A53ADBF2B401406CB3 /* Pods_MLtest.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		95C1866A1FB62EE100193C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95C1866D1FB62EE100193C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95C1866F1FB62EE100193C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountEntryViewController.swift; sourceTree = "<group>"; };
+		95E977D41FB63BE600A9A937 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		95E977D61FB646E500A9A937 /* MercadoPago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoPago.swift; sourceTree = "<group>"; };
 		B9ACC3A53ADBF2B401406CB3 /* Pods_MLtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EF1E54B21B5D31C72F8EA8 /* Pods-MLtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLtest/Pods-MLtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,14 +67,33 @@
 		95C186621FB62EE100193C61 /* MLtest */ = {
 			isa = PBXGroup;
 			children = (
+				95E977D31FB63BD500A9A937 /* Extensions */,
+				95E977D01FB6372100A9A937 /* ViewControllers */,
 				95C186631FB62EE100193C61 /* AppDelegate.swift */,
-				95C186651FB62EE100193C61 /* ViewController.swift */,
 				95C186671FB62EE100193C61 /* Main.storyboard */,
 				95C1866A1FB62EE100193C61 /* Assets.xcassets */,
 				95C1866C1FB62EE100193C61 /* LaunchScreen.storyboard */,
 				95C1866F1FB62EE100193C61 /* Info.plist */,
+				95E977D61FB646E500A9A937 /* MercadoPago.swift */,
 			);
 			path = MLtest;
+			sourceTree = "<group>";
+		};
+		95E977D01FB6372100A9A937 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95C186651FB62EE100193C61 /* ViewController.swift */,
+				95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95E977D31FB63BD500A9A937 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				95E977D41FB63BE600A9A937 /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A3049B1AFB7B82405D875681 /* Pods */ = {
@@ -211,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E977D51FB63BE600A9A937 /* StringExtensions.swift in Sources */,
 				95C186661FB62EE100193C61 /* ViewController.swift in Sources */,
 				95C186641FB62EE100193C61 /* AppDelegate.swift in Sources */,
+				95E977D71FB646E500A9A937 /* MercadoPago.swift in Sources */,
+				95E977D21FB6376F00A9A937 /* AmountEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

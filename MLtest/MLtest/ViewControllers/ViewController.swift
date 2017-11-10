@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MLtest
 //
-//  Created by InAllMedia on 11/10/17.
+//  Created by AleIartsev on 11/10/17.
 //  Copyright © 2017 AleIartsev. All rights reserved.
 //
 

@@ -6,5 +6,6 @@ target 'MLtest' do
 
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'Alamofire-SwiftyJSON'
 
 end
