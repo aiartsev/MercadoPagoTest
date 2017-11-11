@@ -45,16 +45,15 @@ class MercadoPago {
             PARAMETER_AMOUNT: info.amount,
             PARAMETER_BANK_ID: info.bank?.id ?? ""
         ]
-        
+
         get("\(PAY_METHODS_URI)/\(INSTALLMENTS_URI)", withParameters: parameters, completionHandler: completionHandler)
     }
     
     static func get(_ uri: String, withParameters parameters: Parameters?, completionHandler: @escaping (DataResponse<JSON>) -> Void) {
         let url = "\(BASE_URL)\(uri)"
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+        Alamofire.request(url, method: .get, parameters: parameters)
             .responseSwiftyJSON { dataResponse in
                 completionHandler(dataResponse)
         }
-
     }
 }

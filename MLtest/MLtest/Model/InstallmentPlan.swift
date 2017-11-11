@@ -7,7 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class InstallmentPlan : PaymentInfoItem {
+    let JSON_MESSAGE = "recommended_message"
     
+    var recommendedMessage: String?
+    
+    override init(withJSON json: JSON) {
+        super.init(withJSON: json)
+        
+        recommendedMessage = json[JSON_MESSAGE].stringValue
+    }
 }

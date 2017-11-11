@@ -1,5 +1,5 @@
 //
-//  PaymentMethodTableViewCell.swift
+//  PaymentInfoTableViewCell.swift
 //  MLtest
 //
 //  Created by AleIartsev on 11/11/17.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class PaymentMethodTableViewCell: UITableViewCell {
+class PaymentInfoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var MethodImageView: UIImageView!
-    @IBOutlet weak var MethodNameLabel: UILabel!
+    @IBOutlet weak var infoImageView: UIImageView!
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    var paymetInfoItem: PaymentInfoItem?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,91 +7,80 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Alamofire_SwiftyJSON
 
-class SelectInstallmentPlanViewController: UITableViewController {
-
-    var paymentInfo: PaymentInfo?
+class SelectInstallmentPlanViewController: PaymentInfoItemTableViewController {
+    
+    let JSON_COSTS = "payer_costs"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "PaymentInfoComplete", sender: tableView.cellForRow(at: indexPath))
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func loadData() {
+        super.loadData()
+        
+        guard let info = self.paymentInfo else {
+            return
+        }
+        
+        MercadoPago.getInstallmentPlans(withInfo: info) { dataResponse in
+            guard (dataResponse.error == nil) else {
+                print ("ERROR: \(dataResponse.error!)")
+                return
+            }
+            
+            if let response : JSON = dataResponse.value {
+                
+                let onlyResponse = response[0]//[self.JSON_COSTS]
+                let costs = onlyResponse[self.JSON_COSTS]
+                
+                for (_, json) : (String, JSON) in costs {
+                    let plan = InstallmentPlan(withJSON: json)
+                    self.paymentInfoItems?.append(plan)
+                }
+                
+                self.tableView.reloadData()
+            }
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    
+    override func configureCell(_ cell: PaymentInfoTableViewCell, forIndexPath indexPath: IndexPath) -> UITableViewCell {
+        
+        if let infoItems = paymentInfoItems, let plan = infoItems[indexPath.row] as? InstallmentPlan  {
+            cell.infoLabel.text = plan.recommendedMessage
+        }
+        
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let destination = segue.destination as? AmountEntryViewController {
+            
+            if let info = self.paymentInfo, let selectedCell = sender as? PaymentInfoTableViewCell {
+                
+                info.plan = selectedCell.paymetInfoItem as? InstallmentPlan
+                
+                destination.paymentInfo = info
+            }
+            
+        }
     }
-    */
 
 }

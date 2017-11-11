@@ -62,20 +62,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="45" id="oBt-LG-q0p" customClass="PaymentMethodTableViewCell" customModule="MLtest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentInfoCell" rowHeight="45" id="oBt-LG-q0p" customClass="PaymentInfoTableViewCell" customModule="MLtest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBt-LG-q0p" id="de1-gH-Obo">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-nU-GTi" userLabel="MetodImageView">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-nU-GTi" userLabel="InfoImageView">
                                             <rect key="frame" x="254" y="5" width="72" height="34.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="NeA-nU-GTi" secondAttribute="height" multiplier="90:43" id="gph-zf-gcO"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ce-Mi-6Zl" userLabel="MethodNameLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ce-Mi-6Zl" userLabel="InfoLabel">
                                             <rect key="frame" x="31" y="12" width="213" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -92,9 +92,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="MethodImageView" destination="NeA-nU-GTi" id="50b-hH-qzT"/>
-                                    <outlet property="MethodNameLabel" destination="7ce-Mi-6Zl" id="47P-Qk-SxU"/>
-                                    <segue destination="dkJ-wl-zRk" kind="show" identifier="MethodSelected" trigger="accessoryAction" id="D6o-ao-vGH"/>
+                                    <outlet property="infoImageView" destination="NeA-nU-GTi" id="3wI-uR-uY3"/>
+                                    <outlet property="infoLabel" destination="7ce-Mi-6Zl" id="Xuf-kP-Cvd"/>
+                                    <segue destination="dkJ-wl-zRk" kind="show" id="wLt-3Y-94u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,20 +117,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="45" id="4Op-7b-asK" customClass="PaymentMethodTableViewCell" customModule="MLtest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentInfoCell" rowHeight="45" id="4Op-7b-asK" customClass="PaymentInfoTableViewCell" customModule="MLtest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Op-7b-asK" id="ucM-5W-NOY">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-Y7-Tir" userLabel="MetodImageView">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-Y7-Tir" userLabel="InfoImageView">
                                             <rect key="frame" x="254" y="5" width="72" height="34.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="mCa-Y7-Tir" secondAttribute="height" multiplier="90:43" id="UT3-CP-SjY"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-ct-5oS" userLabel="MethodNameLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-ct-5oS" userLabel="InfoLabel">
                                             <rect key="frame" x="31" y="12" width="213" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -147,8 +147,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="MethodImageView" destination="mCa-Y7-Tir" id="8t4-pg-1Kr"/>
-                                    <outlet property="MethodNameLabel" destination="qJz-ct-5oS" id="4j4-SG-olT"/>
+                                    <outlet property="infoImageView" destination="mCa-Y7-Tir" id="mAj-xW-2ef"/>
+                                    <outlet property="infoLabel" destination="qJz-ct-5oS" id="RJL-sM-QfG"/>
+                                    <segue destination="UOm-0x-IdV" kind="show" id="wgr-gs-OsN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -162,22 +163,37 @@
             </objects>
             <point key="canvasLocation" x="2158" y="119"/>
         </scene>
-        <!--How Many Installments?-->
+        <!--Select Installments Plan-->
         <scene sceneID="4oW-pe-Zud">
             <objects>
-                <tableViewController title="How Many Installments?" id="UOm-0x-IdV" customClass="SelectInstallmentPlanViewController" customModule="MLtest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9BQ-hl-cFw">
+                <tableViewController title="Select Installments Plan" id="UOm-0x-IdV" customClass="SelectInstallmentPlanViewController" customModule="MLtest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="9BQ-hl-cFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pnv-er-GPV">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentInfoCell" rowHeight="45" id="rPO-QI-Vm5" customClass="PaymentInfoTableViewCell" customModule="MLtest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnv-er-GPV" id="JXb-o0-lvg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rPO-QI-Vm5" id="0Om-5x-ett">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rf-qc-Yjd" userLabel="InfoLabel">
+                                            <rect key="frame" x="31" y="12" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Rf-qc-Yjd" firstAttribute="centerY" secondItem="0Om-5x-ett" secondAttribute="centerY" id="APa-s1-llI"/>
+                                        <constraint firstItem="9Rf-qc-Yjd" firstAttribute="leading" secondItem="0Om-5x-ett" secondAttribute="leadingMargin" constant="15" id="Gwe-8X-ElU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoLabel" destination="9Rf-qc-Yjd" id="7W0-jB-zGz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -185,8 +201,12 @@
                             <outlet property="delegate" destination="UOm-0x-IdV" id="Jtw-BC-91X"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="30Y-gD-0wb" kind="unwind" identifier="PaymentInfoComplete" unwindAction="prepareForUnwindWithSegue:" id="WME-u9-02E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HcJ-Kk-MbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="30Y-gD-0wb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3164" y="119"/>
         </scene>
