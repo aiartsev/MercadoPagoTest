@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,22 +53,49 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
         </scene>
-        <!--Select Your Card-->
+        <!--Select Payment Method-->
         <scene sceneID="ZqT-g8-Ua2">
             <objects>
-                <tableViewController title="Select Your Card" id="2uE-It-g8W" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4ra-fM-LsY">
+                <tableViewController title="Select Payment Method" id="2uE-It-g8W" customClass="SelectPaymentMethodViewController" customModule="MLtest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="4ra-fM-LsY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oBt-LG-q0p">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="45" id="oBt-LG-q0p" customClass="PaymentMethodTableViewCell" customModule="MLtest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBt-LG-q0p" id="de1-gH-Obo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-nU-GTi" userLabel="MetodImageView">
+                                            <rect key="frame" x="254" y="5" width="72" height="34.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NeA-nU-GTi" secondAttribute="height" multiplier="90:43" id="gph-zf-gcO"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ce-Mi-6Zl" userLabel="MethodNameLabel">
+                                            <rect key="frame" x="31" y="12" width="213" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7ce-Mi-6Zl" firstAttribute="leading" secondItem="de1-gH-Obo" secondAttribute="leadingMargin" constant="15" id="8U8-KA-NUC"/>
+                                        <constraint firstItem="7ce-Mi-6Zl" firstAttribute="centerY" secondItem="de1-gH-Obo" secondAttribute="centerY" id="Dpe-k1-qBL"/>
+                                        <constraint firstItem="NeA-nU-GTi" firstAttribute="top" secondItem="de1-gH-Obo" secondAttribute="top" constant="5" id="Sr0-R6-yWa"/>
+                                        <constraint firstAttribute="trailing" secondItem="NeA-nU-GTi" secondAttribute="trailing" constant="15" id="X08-au-TFj"/>
+                                        <constraint firstItem="NeA-nU-GTi" firstAttribute="leading" secondItem="7ce-Mi-6Zl" secondAttribute="trailing" constant="10" id="bHp-IL-DIE"/>
+                                        <constraint firstAttribute="bottom" secondItem="NeA-nU-GTi" secondAttribute="bottom" constant="5" id="fEL-qC-USy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MethodImageView" destination="NeA-nU-GTi" id="50b-hH-qzT"/>
+                                    <outlet property="MethodNameLabel" destination="7ce-Mi-6Zl" id="47P-Qk-SxU"/>
+                                    <segue destination="dkJ-wl-zRk" kind="show" identifier="MethodSelected" trigger="accessoryAction" id="D6o-ao-vGH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -77,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOH-jI-wGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="120"/>
+            <point key="canvasLocation" x="1311.2" y="119.1904047976012"/>
         </scene>
         <!--Select Your Bank-->
         <scene sceneID="zh9-A3-ET8">

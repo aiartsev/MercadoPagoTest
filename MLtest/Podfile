@@ -5,6 +5,7 @@ target 'MLtest' do
   use_frameworks!
 
     pod 'Alamofire'
+    pod 'AlamofireImage'
     pod 'SwiftyJSON'
     pod 'Alamofire-SwiftyJSON'
 

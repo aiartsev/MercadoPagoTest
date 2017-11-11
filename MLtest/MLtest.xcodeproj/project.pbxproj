@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95B700F31FB7593600FC5C24 /* SelectPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B700F21FB7593600FC5C24 /* SelectPaymentMethodViewController.swift */; };
+		95B700F61FB7620000FC5C24 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B700F51FB7620000FC5C24 /* PaymentMethod.swift */; };
+		95B700F81FB7620D00FC5C24 /* PaymentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B700F71FB7620D00FC5C24 /* PaymentInfo.swift */; };
+		95B700FD1FB7670D00FC5C24 /* PaymentMethodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B700FC1FB7670D00FC5C24 /* PaymentMethodTableViewCell.swift */; };
+		95B700FF1FB76ADB00FC5C24 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B700FE1FB76ADB00FC5C24 /* UIImageViewExtensions.swift */; };
+		95B701011FB7786700FC5C24 /* PaymentInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701001FB7786700FC5C24 /* PaymentInfoItem.swift */; };
+		95B701051FB778BD00FC5C24 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701041FB778BD00FC5C24 /* Bank.swift */; };
+		95B701091FB7799200FC5C24 /* InstallmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701081FB7799200FC5C24 /* InstallmentPlan.swift */; };
 		95C186641FB62EE100193C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C186631FB62EE100193C61 /* AppDelegate.swift */; };
 		95C186661FB62EE100193C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C186651FB62EE100193C61 /* ViewController.swift */; };
 		95C186691FB62EE100193C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C186671FB62EE100193C61 /* Main.storyboard */; };
@@ -15,11 +23,22 @@
 		95E977D21FB6376F00A9A937 /* AmountEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */; };
 		95E977D51FB63BE600A9A937 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D41FB63BE600A9A937 /* StringExtensions.swift */; };
 		95E977D71FB646E500A9A937 /* MercadoPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E977D61FB646E500A9A937 /* MercadoPago.swift */; };
-		D64EAAD5730BD4FD7F35E78C /* Pods_MLtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ACC3A53ADBF2B401406CB3 /* Pods_MLtest.framework */; };
+		95E977D81FB6610700A9A937 /* Alamofire_SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E977D91FB6610700A9A937 /* Alamofire_SwiftyJSON.framework */; };
+		95E977DA1FB6614400A9A937 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E977DB1FB6614400A9A937 /* Alamofire.framework */; };
+		95E977DC1FB6614D00A9A937 /* Pods_MLtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E977DD1FB6614D00A9A937 /* Pods_MLtest.framework */; };
+		95E977DE1FB6615000A9A937 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E977DF1FB6615000A9A937 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FB4924E9D65D66772E079E7 /* Pods-MLtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLtest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLtest/Pods-MLtest.debug.xcconfig"; sourceTree = "<group>"; };
+		95B700F21FB7593600FC5C24 /* SelectPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodViewController.swift; sourceTree = "<group>"; };
+		95B700F51FB7620000FC5C24 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		95B700F71FB7620D00FC5C24 /* PaymentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfo.swift; sourceTree = "<group>"; };
+		95B700FC1FB7670D00FC5C24 /* PaymentMethodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodTableViewCell.swift; sourceTree = "<group>"; };
+		95B700FE1FB76ADB00FC5C24 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		95B701001FB7786700FC5C24 /* PaymentInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoItem.swift; sourceTree = "<group>"; };
+		95B701041FB778BD00FC5C24 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		95B701081FB7799200FC5C24 /* InstallmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPlan.swift; sourceTree = "<group>"; };
 		95C186601FB62EE100193C61 /* MLtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C186631FB62EE100193C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95C186651FB62EE100193C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +49,10 @@
 		95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountEntryViewController.swift; sourceTree = "<group>"; };
 		95E977D41FB63BE600A9A937 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		95E977D61FB646E500A9A937 /* MercadoPago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoPago.swift; sourceTree = "<group>"; };
+		95E977D91FB6610700A9A937 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E977DB1FB6614400A9A937 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E977DD1FB6614D00A9A937 /* Pods_MLtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MLtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E977DF1FB6615000A9A937 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACC3A53ADBF2B401406CB3 /* Pods_MLtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EF1E54B21B5D31C72F8EA8 /* Pods-MLtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLtest/Pods-MLtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,13 +62,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D64EAAD5730BD4FD7F35E78C /* Pods_MLtest.framework in Frameworks */,
+				95E977DE1FB6615000A9A937 /* SwiftyJSON.framework in Frameworks */,
+				95E977DC1FB6614D00A9A937 /* Pods_MLtest.framework in Frameworks */,
+				95E977DA1FB6614400A9A937 /* Alamofire.framework in Frameworks */,
+				95E977D81FB6610700A9A937 /* Alamofire_SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95B700F41FB761C100FC5C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95B700F51FB7620000FC5C24 /* PaymentMethod.swift */,
+				95B700F71FB7620D00FC5C24 /* PaymentInfo.swift */,
+				95B701001FB7786700FC5C24 /* PaymentInfoItem.swift */,
+				95B701041FB778BD00FC5C24 /* Bank.swift */,
+				95B701081FB7799200FC5C24 /* InstallmentPlan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95B700F91FB765C800FC5C24 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				95B700FC1FB7670D00FC5C24 /* PaymentMethodTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		95C186571FB62EE100193C61 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +113,8 @@
 		95C186621FB62EE100193C61 /* MLtest */ = {
 			isa = PBXGroup;
 			children = (
+				95B700F91FB765C800FC5C24 /* TableViewCells */,
+				95B700F41FB761C100FC5C24 /* Model */,
 				95E977D31FB63BD500A9A937 /* Extensions */,
 				95E977D01FB6372100A9A937 /* ViewControllers */,
 				95C186631FB62EE100193C61 /* AppDelegate.swift */,
@@ -84,6 +132,7 @@
 			children = (
 				95C186651FB62EE100193C61 /* ViewController.swift */,
 				95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */,
+				95B700F21FB7593600FC5C24 /* SelectPaymentMethodViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -92,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				95E977D41FB63BE600A9A937 /* StringExtensions.swift */,
+				95B700FE1FB76ADB00FC5C24 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,6 +158,10 @@
 		A4F48791151E5B6C623C9CF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95E977DF1FB6615000A9A937 /* SwiftyJSON.framework */,
+				95E977DD1FB6614D00A9A937 /* Pods_MLtest.framework */,
+				95E977DB1FB6614400A9A937 /* Alamofire.framework */,
+				95E977D91FB6610700A9A937 /* Alamofire_SwiftyJSON.framework */,
 				B9ACC3A53ADBF2B401406CB3 /* Pods_MLtest.framework */,
 			);
 			name = Frameworks;
@@ -236,10 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B700F31FB7593600FC5C24 /* SelectPaymentMethodViewController.swift in Sources */,
 				95E977D51FB63BE600A9A937 /* StringExtensions.swift in Sources */,
 				95C186661FB62EE100193C61 /* ViewController.swift in Sources */,
+				95B701091FB7799200FC5C24 /* InstallmentPlan.swift in Sources */,
+				95B701011FB7786700FC5C24 /* PaymentInfoItem.swift in Sources */,
+				95B700FD1FB7670D00FC5C24 /* PaymentMethodTableViewCell.swift in Sources */,
+				95B700F61FB7620000FC5C24 /* PaymentMethod.swift in Sources */,
 				95C186641FB62EE100193C61 /* AppDelegate.swift in Sources */,
 				95E977D71FB646E500A9A937 /* MercadoPago.swift in Sources */,
+				95B700F81FB7620D00FC5C24 /* PaymentInfo.swift in Sources */,
+				95B701051FB778BD00FC5C24 /* Bank.swift in Sources */,
+				95B700FF1FB76ADB00FC5C24 /* UIImageViewExtensions.swift in Sources */,
 				95E977D21FB6376F00A9A937 /* AmountEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
