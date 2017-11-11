@@ -14,13 +14,13 @@ class PaymentInfoItem {
     let JSON_NAME = "name"
     let JSON_IMAGE = "secure_thumbnail"
     
-    var Id: String
-    var Name: String
-    var ImageURL: String
+    var id: String
+    var name: String
+    var imageURL: String
     
     init(withJSON json: JSON) {
-        Id = json[JSON_ID].stringValue
-        Name = json[JSON_NAME].stringValue
-        ImageURL = json[JSON_IMAGE].stringValue
+        id = json[JSON_ID].stringValue
+        name = json[JSON_NAME].stringValue
+        imageURL = json[JSON_IMAGE].stringValue
     }
 }

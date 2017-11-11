@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Specify Amount" id="aEH-zJ-ViI">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="891-Uq-Ydv">
                             <connections>
-                                <segue destination="2uE-It-g8W" kind="show" id="VUG-08-PdV"/>
+                                <segue destination="2uE-It-g8W" kind="show" identifier="AmountSelected" id="VUG-08-PdV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -111,19 +111,45 @@
         <!--Select Your Bank-->
         <scene sceneID="zh9-A3-ET8">
             <objects>
-                <tableViewController title="Select Your Bank" id="dkJ-wl-zRk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GKJ-Gi-O7F">
+                <tableViewController title="Select Your Bank" id="dkJ-wl-zRk" customClass="SelectBankViewController" customModule="MLtest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="GKJ-Gi-O7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XQN-6Q-Ee6">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="45" id="4Op-7b-asK" customClass="PaymentMethodTableViewCell" customModule="MLtest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XQN-6Q-Ee6" id="RaE-Et-e46">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Op-7b-asK" id="ucM-5W-NOY">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-Y7-Tir" userLabel="MetodImageView">
+                                            <rect key="frame" x="254" y="5" width="72" height="34.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="mCa-Y7-Tir" secondAttribute="height" multiplier="90:43" id="UT3-CP-SjY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-ct-5oS" userLabel="MethodNameLabel">
+                                            <rect key="frame" x="31" y="12" width="213" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mCa-Y7-Tir" firstAttribute="leading" secondItem="qJz-ct-5oS" secondAttribute="trailing" constant="10" id="D8d-Rd-RYy"/>
+                                        <constraint firstItem="mCa-Y7-Tir" firstAttribute="top" secondItem="ucM-5W-NOY" secondAttribute="top" constant="5" id="Ey8-dv-Hj0"/>
+                                        <constraint firstItem="qJz-ct-5oS" firstAttribute="leading" secondItem="ucM-5W-NOY" secondAttribute="leadingMargin" constant="15" id="cQ7-jh-g5Y"/>
+                                        <constraint firstItem="qJz-ct-5oS" firstAttribute="centerY" secondItem="ucM-5W-NOY" secondAttribute="centerY" id="eRs-Gc-Gk5"/>
+                                        <constraint firstAttribute="trailing" secondItem="mCa-Y7-Tir" secondAttribute="trailing" constant="15" id="jpu-Bc-FLo"/>
+                                        <constraint firstAttribute="bottom" secondItem="mCa-Y7-Tir" secondAttribute="bottom" constant="5" id="xMb-0e-1xi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="MethodImageView" destination="mCa-Y7-Tir" id="8t4-pg-1Kr"/>
+                                    <outlet property="MethodNameLabel" destination="qJz-ct-5oS" id="4j4-SG-olT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -139,7 +165,7 @@
         <!--How Many Installments?-->
         <scene sceneID="4oW-pe-Zud">
             <objects>
-                <tableViewController title="How Many Installments?" id="UOm-0x-IdV" sceneMemberID="viewController">
+                <tableViewController title="How Many Installments?" id="UOm-0x-IdV" customClass="SelectInstallmentPlanViewController" customModule="MLtest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9BQ-hl-cFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

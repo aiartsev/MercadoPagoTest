@@ -15,6 +15,8 @@
 		95B701011FB7786700FC5C24 /* PaymentInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701001FB7786700FC5C24 /* PaymentInfoItem.swift */; };
 		95B701051FB778BD00FC5C24 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701041FB778BD00FC5C24 /* Bank.swift */; };
 		95B701091FB7799200FC5C24 /* InstallmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B701081FB7799200FC5C24 /* InstallmentPlan.swift */; };
+		95B7010B1FB77D5F00FC5C24 /* SelectBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7010A1FB77D5F00FC5C24 /* SelectBankViewController.swift */; };
+		95B7010D1FB77DA500FC5C24 /* SelectInstallmentPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7010C1FB77DA500FC5C24 /* SelectInstallmentPlanViewController.swift */; };
 		95C186641FB62EE100193C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C186631FB62EE100193C61 /* AppDelegate.swift */; };
 		95C186661FB62EE100193C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C186651FB62EE100193C61 /* ViewController.swift */; };
 		95C186691FB62EE100193C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C186671FB62EE100193C61 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		95B701001FB7786700FC5C24 /* PaymentInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoItem.swift; sourceTree = "<group>"; };
 		95B701041FB778BD00FC5C24 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		95B701081FB7799200FC5C24 /* InstallmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentPlan.swift; sourceTree = "<group>"; };
+		95B7010A1FB77D5F00FC5C24 /* SelectBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankViewController.swift; sourceTree = "<group>"; };
+		95B7010C1FB77DA500FC5C24 /* SelectInstallmentPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInstallmentPlanViewController.swift; sourceTree = "<group>"; };
 		95C186601FB62EE100193C61 /* MLtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C186631FB62EE100193C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95C186651FB62EE100193C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				95C186651FB62EE100193C61 /* ViewController.swift */,
 				95E977D11FB6376F00A9A937 /* AmountEntryViewController.swift */,
 				95B700F21FB7593600FC5C24 /* SelectPaymentMethodViewController.swift */,
+				95B7010A1FB77D5F00FC5C24 /* SelectBankViewController.swift */,
+				95B7010C1FB77DA500FC5C24 /* SelectInstallmentPlanViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -301,7 +307,9 @@
 				95E977D71FB646E500A9A937 /* MercadoPago.swift in Sources */,
 				95B700F81FB7620D00FC5C24 /* PaymentInfo.swift in Sources */,
 				95B701051FB778BD00FC5C24 /* Bank.swift in Sources */,
+				95B7010D1FB77DA500FC5C24 /* SelectInstallmentPlanViewController.swift in Sources */,
 				95B700FF1FB76ADB00FC5C24 /* UIImageViewExtensions.swift in Sources */,
+				95B7010B1FB77D5F00FC5C24 /* SelectBankViewController.swift in Sources */,
 				95E977D21FB6376F00A9A937 /* AmountEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class SelectPaymentMethodViewController: UITableViewController {
 
+    var paymentInfo: PaymentInfo?
     var paymentMethods : [PaymentMethod]?
     
     override func viewDidLoad() {
@@ -61,21 +62,20 @@ class SelectPaymentMethodViewController: UITableViewController {
         
         if let methods = paymentMethods {
             let method = methods[indexPath.row]
-            cell.MethodNameLabel.text = method.Name
-            cell.MethodImageView.imageFromUrl(urlString: method.ImageURL)
+            cell.MethodNameLabel.text = method.name
+            cell.MethodImageView.imageFromUrl(urlString: method.imageURL)
             cell.MethodImageView.contentMode = .scaleAspectFit
         }
         
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        if let destination = segue.destination as? SelectBankViewController {
+            
+        }
     }
-    */
 
 }

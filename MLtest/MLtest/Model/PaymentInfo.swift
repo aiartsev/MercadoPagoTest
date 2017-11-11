@@ -9,10 +9,12 @@
 import Foundation
 
 class PaymentInfo {
-    var Amount: Double
-    var Method: PaymentMethod?
+    var amount: Double
+    var method: PaymentMethod?
+    var bank: Bank?
+    var plan: InstallmentPlan?
     
     init(withAmount amount: Double) {
-        Amount = amount
+        self.amount = amount
     }
 }
