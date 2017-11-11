@@ -24,7 +24,7 @@ class SelectBankViewController: PaymentInfoItemTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Navigation Methods
+    // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

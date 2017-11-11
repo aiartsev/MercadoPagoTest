@@ -10,10 +10,16 @@ import UIKit
 
 class AmountEntryViewController: ViewController, UITextFieldDelegate {
     
+    // MARK: - Fields
+    
     var paymentInfo: PaymentInfo?
     var flowComplete = false
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var amountEntryField: UITextField!
+    
+    // MARK: - Framework Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +33,15 @@ class AmountEntryViewController: ViewController, UITextFieldDelegate {
         displayMessage()
     }
    
+    // MARK: - Actions
+    
     @IBAction func amountChanged(_ sender: UITextField) {
         if let amountString = sender.text?.currencyInputFormatting() {
             sender.text = amountString
         }
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -59,6 +69,8 @@ class AmountEntryViewController: ViewController, UITextFieldDelegate {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         flowComplete = true
     }
+    
+    // MARK: - Helper Methods
     
     func displayMessage() {
         if (!flowComplete) {

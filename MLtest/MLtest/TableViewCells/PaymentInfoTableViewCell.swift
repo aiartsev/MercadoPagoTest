@@ -10,20 +10,12 @@ import UIKit
 
 class PaymentInfoTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var infoImageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
     
-    var paymetInfoItem: PaymentInfoItem?
+    // MARK: - Fields
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    var paymetInfoItem: PaymentInfoItem?
 }

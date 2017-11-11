@@ -12,6 +12,7 @@ import AlamofireImage
 
 extension UIImageView {
     
+    // Image loading from the URL using AlamofireImage
     public func imageFromUrl(urlString: String) {
         
         if let url = URL(string: urlString) {

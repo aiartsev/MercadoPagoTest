@@ -10,9 +10,16 @@ import Foundation
 import SwiftyJSON
 
 class InstallmentPlan : PaymentInfoItem {
+    
+    // MARK: - Constants
+    
     let JSON_MESSAGE = "recommended_message"
     
+    // MARK: - Fields
+    
     var recommendedMessage: String?
+    
+    // MARK: - Constructor
     
     override init(withJSON json: JSON) {
         super.init(withJSON: json)

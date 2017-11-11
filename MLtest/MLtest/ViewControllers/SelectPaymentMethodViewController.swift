@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class SelectPaymentMethodViewController: PaymentInfoItemTableViewController {
 
+    // MARK: - Framework Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,6 +21,8 @@ class SelectPaymentMethodViewController: PaymentInfoItemTableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -35,6 +39,8 @@ class SelectPaymentMethodViewController: PaymentInfoItemTableViewController {
         }
     }
 
+    // MARK: - Helper Methods
+    
     override func loadData() {
         super.loadData()
         

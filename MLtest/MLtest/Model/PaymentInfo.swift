@@ -9,12 +9,18 @@
 import Foundation
 
 class PaymentInfo {
+    
+    // MARK: - Fields
+    
     var amount: Double
     var method: PaymentMethod?
     var bank: Bank?
     var plan: InstallmentPlan?
     
+    // MARK: - Constructor
+    
     init(withAmount amount: Double) {
+        
         self.amount = amount
     }
 }

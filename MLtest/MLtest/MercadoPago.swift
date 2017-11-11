@@ -13,6 +13,8 @@ import Alamofire_SwiftyJSON
 
 class MercadoPago {
     
+    // MARK: - Constants
+    
     static let PUBLIC_KEY = "444a9ef5-8a6b-429f-abdf-587639155d88"
     
     static let BASE_URL = "https://api.mercadopago.com/v1/"
@@ -24,6 +26,8 @@ class MercadoPago {
     static let PARAMETER_METHOD_ID = "payment_method_id"
     static let PARAMETER_AMOUNT = "amount"
     static let PARAMETER_BANK_ID = "issuer.id"
+    
+    // MARK: - Main Methods
     
     static func getPaymentMethods(completionHandler: @escaping (DataResponse<JSON>) -> Void) {
         get(PAY_METHODS_URI, withParameters: [PARAMETER_PUBLIC_KEY: PUBLIC_KEY], completionHandler: completionHandler)
@@ -48,6 +52,8 @@ class MercadoPago {
 
         get("\(PAY_METHODS_URI)/\(INSTALLMENTS_URI)", withParameters: parameters, completionHandler: completionHandler)
     }
+    
+    // MARK: - Helper Methods
     
     static func get(_ uri: String, withParameters parameters: Parameters?, completionHandler: @escaping (DataResponse<JSON>) -> Void) {
         let url = "\(BASE_URL)\(uri)"

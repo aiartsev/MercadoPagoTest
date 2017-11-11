@@ -13,7 +13,11 @@ import Alamofire_SwiftyJSON
 
 class SelectInstallmentPlanViewController: PaymentInfoItemTableViewController {
     
+    // MARK: - Constants
+    
     let JSON_COSTS = "payer_costs"
+    
+    // MARK: - Framework Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +29,14 @@ class SelectInstallmentPlanViewController: PaymentInfoItemTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - UITableViewController Methods
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "PaymentInfoComplete", sender: tableView.cellForRow(at: indexPath))
     }
 
+    // MARK: - Helper Methods
+    
     override func loadData() {
         super.loadData()
         

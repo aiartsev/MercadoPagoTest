@@ -10,13 +10,20 @@ import Foundation
 import SwiftyJSON
 
 class PaymentInfoItem {
+    
+    // MARK: - Constants
+    
     let JSON_ID = "id"
     let JSON_NAME = "name"
     let JSON_IMAGE = "secure_thumbnail"
     
+    // MARK: - Fields
+    
     var id: String?
     var name: String?
     var imageURL: String?
+    
+    // MARK: - Constructor
     
     init(withJSON json: JSON) {
         id = json[JSON_ID].stringValue
