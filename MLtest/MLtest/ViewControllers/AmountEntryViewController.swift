@@ -37,7 +37,7 @@ class AmountEntryViewController: ViewController, UITextFieldDelegate {
     
     @IBAction func amountChanged(_ sender: UITextField) {
         if let amountString = sender.text?.currencyInputFormatting() {
-            sender.text = amountString
+            sender.text = amountString.truncated(10)
         }
     }
     

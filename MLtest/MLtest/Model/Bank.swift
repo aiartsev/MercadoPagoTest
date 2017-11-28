@@ -9,5 +9,5 @@
 import Foundation
 
 class Bank : PaymentInfoItem {
-    
+    // Insert future implementation here.
 }

@@ -36,4 +36,8 @@ extension String {
         
         return formatter.string(from: number)!
     }
+    
+    func truncated(_ truncationLimit: Int) -> String {
+        return String(prefix(truncationLimit))
+    }
 }
